@@ -104,6 +104,7 @@ except Exception as e:
 with st.sidebar:
     st.title("About")
     st.info("This AI-powered tool predicts the market price of a laptop based on its specifications with ~88% accuracy.")
+    st.markdown(f"[🚀 Live App Link](https://laptop-price-prediction-by-jsh.streamlit.app/)")
     st.markdown("---")
     st.subheader("Model Info")
     st.write("**Algorithm:** Random Forest Regressor")

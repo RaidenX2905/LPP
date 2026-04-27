@@ -4,22 +4,26 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![Gradio](https://img.shields.io/badge/Gradio-FF7C00?style=flat&logo=gradio&logoColor=white)](https://gradio.app/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-An end-to-end Machine Learning project to predict laptop prices based on hardware specifications, featuring a fully trained Random Forest model and an interactive web interface powered by Gradio.
+### [🚀 View Live Demo](https://laptop-price-prediction-by-jsh.streamlit.app/)
+
+An end-to-end Machine Learning project to predict laptop prices based on hardware specifications, featuring a fully trained Random Forest model and a premium web interface powered by Streamlit.
 
 </div>
 
 ---
 
 ## 📝 Table of Contents
+- [Live Demo](https://laptop-price-prediction-by-jsh.streamlit.app/)
 - [About the Project](#-about-the-project)
 - [Project Architecture](#-project-architecture)
 - [Repository Structure](#-repository-structure)
 - [Prerequisites](#%EF%B8%8F-prerequisites)
 - [Installation \& Setup](#%EF%B8%8F-installation--setup)
 - [How to Use](#-how-to-use)
+  - [Streamlit Web App (Recommended)](#-streamlit-web-app-recommended)
   - [Interactive Web App (Gradio)](#interactive-web-app-gradio)
 - [Model Details \& Performance](#-model-details--performance)
 
@@ -32,7 +36,8 @@ The digital marketplace for laptops is vast and continually changing. The primar
 **Key Highlights:**
 - **Data Preprocessing Pipeline:** Robust handling of missing continuous data (using median imputation) and encoding of categorical features via `LabelEncoder`.
 - **Model Comparison:** Evaluated multiple regression models, finding the optimal balance of variance and bias.
-- **Interactive UI:** A ready-to-use Gradio interface directly embedded for instant price predictions without writing code.
+- **Interactive UI:** A premium Streamlit interface for a professional user experience.
+- **Legacy Support:** Gradio interface still available within the notebooks for development testing.
 
 ---
 
@@ -43,7 +48,7 @@ The digital marketplace for laptops is vast and continually changing. The primar
 3. **Imputation:** Fills `NaN` values in `rating`, `no_of_ratings`, and `no_of_reviews` with median values.
 4. **Encoding:** Transforms string categorical variables (`name`, `processor`, `ram`, `os`, `storage`) into numeric formats.
 5. **Modeling:** Splits data into Train/Test sets and trains Regressor models.
-6. **Deployment:** Exposes the winning model (Random Forest) via a localized Gradio Web App.
+6. **Deployment:** Exposes the winning model (Random Forest) via a premium Streamlit Web App.
 
 ---
 
@@ -107,6 +112,14 @@ This requires zero local setup.
    ```
 2. Ensure that the notebook is loading the `laptops.csv` file from the correct relative path (`../data/laptops.csv`). Adjust the path in the Pandas `read_csv` cell if necessary based on where your kernel is running.
 3. **Run All Cells:** Go to `Cell -> Run All` (or `Runtime -> Run all` in Colab). This will re-train the models and evaluate them on the spot.
+
+### 🌐 Streamlit Web App (Recommended)
+
+Run the main application for a premium experience:
+```bash
+streamlit run app.py
+```
+Or visit the live link: [laptop-price-prediction-by-jsh.streamlit.app](https://laptop-price-prediction-by-jsh.streamlit.app/)
 
 ### Interactive Web App (Gradio)
 
