@@ -70,15 +70,7 @@ def main():
         st.error(f"Error loading model or data: {e}. Ensure you are running from the correct directory.")
         return
 
-    # Sidebar for inputs
-    st.sidebar.header("Navigation")
-    page = st.sidebar.radio("Go to", ["Predictor", "Project Details"])
 
-    if page == "Project Details":
-        st.header("About the Project")
-        st.write("This project uses Machine Learning to predict laptop prices based on features like processor, RAM, storage, etc.")
-        st.dataframe(df_raw.head())
-        return
 
     # Get unique values for dropdowns
     name_choices = sorted(df_raw['name'].unique().tolist())
